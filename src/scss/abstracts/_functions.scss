@@ -15,3 +15,22 @@
 @function shade($color, $percentage) {
   @return mix(black, $color, $percentage);
 }
+
+/// Helper to paint solid backgrond image
+/// @param {Color} $color
+/// @return {String}
+@function solid-color($color) {
+  @return linear-gradient(to right, $color, $color);
+}
+
+/// Isometric box shadow
+/// @param {Number} $ini
+/// @param {Number} $end
+/// @param {Color} $color
+@function isometric-shadow($ini, $end, $color) {
+  $params: -#{$ini}px #{$ini}px 0 $color;
+  @for $i from $ini+1 through $end {
+    $params: $params, -#{$i}px #{$i}px 0 $color;
+  }
+  @return $params;
+}

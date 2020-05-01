@@ -1,5 +1,6 @@
 @import "abstracts/functions";
 @import "abstracts/variables";
+@import "abstracts/mixins";
 
 *,
 ::after,
@@ -21,61 +22,34 @@ body {
   background-color: $light-grey;
 }
 div {
-  width: 400px;
-  height: 600px;
+  @include base-size;
   margin: 0 auto;
   position: relative;
   flex-shrink: 0;
   border-radius: 20px;
   background-color: $medium-green;
-  box-shadow: -1px 1px 0 $dark-green, -2px 2px 0 $dark-green,
-    -3px 3px 0 $dark-green, -4px 4px 0 $dark-green, -5px 5px 0 $dark-green,
-    -6px 6px 0 $dark-green, -7px 7px 0 $dark-green, -8px 8px 0 $dark-green,
-    -9px 9px 0 $dark-green, -10px 10px 0 $dark-green, -11px 11px 0 $dark-green,
-    -12px 12px 0 $dark-green, -13px 13px 0 $brown, -14px 14px 0 $brown,
-    -15px 15px 0 $brown, -16px 16px 0 $brown, -17px 17px 0 $brown,
-    -18px 18px 0 $brown, -19px 19px 0 $brown, -20px 20px 0 $brown,
-    -21px 21px 0 $brown, -22px 22px 0 $brown, -23px 23px 0 $brown,
-    -24px 24px 0 $brown, -25px 25px 0 $brown, -26px 26px 0 $brown,
-    -27px 27px 0 $brown, -28px 28px 0 $brown, -29px 29px 0 $brown,
-    -30px 30px 0 $brown, -31px 31px 0 $brown, -32px 32px 0 $brown,
-    -33px 33px 0 $brown, -34px 34px 0 $brown, -35px 35px 0 $brown,
-    -36px 36px 0 $brown, -37px 37px 0 $brown, -38px 38px 0 $brown,
-    -39px 39px 0 $brown, -40px 40px 0 $brown, -120px 120px 0 $grey;
+  box-shadow: isometric-shadow(1, 12, $dark-green),
+    isometric-shadow(13, 40, $brown), -120px 120px 0 $grey;
   background-repeat: no-repeat;
-  background-image: linear-gradient(to right, $white, $white),
-    linear-gradient(to right, $white, $white),
-    linear-gradient(to right, $white, $white),
-    linear-gradient(to right, $white, $white),
-    linear-gradient(to right, $white, $white),
-    linear-gradient(to right, $white, $white),
-    linear-gradient(to right, $medium-green, $medium-green),
-    linear-gradient(to right, $medium-green, $medium-green),
-    linear-gradient(to right, $white, $white),
-    linear-gradient(to right, $white, $white),
-    linear-gradient(to right, $white, $white),
-    linear-gradient(to right, $white, $white),
-    linear-gradient(to right, $white, $white),
-    linear-gradient(to right, $white, $white),
-    linear-gradient(to right, $white, $white),
-    radial-gradient(circle, $white 70%, transparent 70%),
+  background-image: solid-color($white), solid-color($white),
+    solid-color($white), solid-color($white), solid-color($white),
+    solid-color($white), solid-color($medium-green), solid-color($medium-green),
+    solid-color($white), solid-color($white), solid-color($white),
+    solid-color($white), solid-color($white), solid-color($white),
+    solid-color($white), radial-gradient(circle, $white 70%, transparent 70%),
     radial-gradient(circle, $medium-green 70%, transparent 70%),
     radial-gradient(circle, $white, $white 70%, transparent 70%),
     radial-gradient(circle, $medium-green 70%, transparent 70%),
     radial-gradient(circle, #fff 70%, transparent 70%),
     radial-gradient(circle, $medium-green 70%, transparent 70%),
-    radial-gradient(circle, #fff 70%, transparent 70%),
-    linear-gradient(to right, $green, $green),
-    linear-gradient(to right, $green, $green),
-    linear-gradient(to right, $green, $green),
-    linear-gradient(to right, $green, $green),
-    linear-gradient(to right, $green, $green),
-    linear-gradient(to right, $green, $green);
+    radial-gradient(circle, #fff 70%, transparent 70%), solid-color($green),
+    solid-color($green), solid-color($green), solid-color($green),
+    solid-color($green), solid-color($green);
   background-size: 4px 40px, 100px 4px, 4px 40px, 4px 40px, 100px 4px, 4px 40px,
     192px 100px, 192px 100px, 200px 4px, 200px 4px, 4px 100px, 4px 100px,
-    4px 100px, 4px 100px, 400px 4px, 20px 20px, 152px 152px, 160px 160px,
-    112px 112px, 120px 120px, 112px 112px, 120px 120px, 400px 50px, 400px 50px,
-    400px 50px, 400px 50px, 400px 50px, 400px 50px;
+    4px 100px, 4px 100px, $width 4px, 20px 20px, 152px 152px, 160px 160px,
+    112px 112px, 120px 120px, 112px 112px, 120px 120px, $width 50px, $width 50px,
+    $width 50px, $width 50px, $width 50px, $width 50px;
   background-position: 150px bottom, 150px 560px, 246px bottom, 150px top,
     150px 40px, 246px top, 104px 0, 104px 504px, 100px 100px, 100px 500px,
     100px bottom, 296px bottom, 100px top, 296px top, left 295px, 190px 287px,
@@ -86,8 +60,7 @@ div {
 }
 div::after {
   content: "";
-  width: 400px;
-  height: 600px;
+  @include base-size;
   padding: 30px;
   position: absolute;
   left: 10px;

@@ -1,0 +1,6 @@
+/// Responsive breakpoint manager
+/// @access public
+@mixin base-size() {
+  width: $width;
+  height: $height;
+}
