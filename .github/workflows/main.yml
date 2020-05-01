@@ -1,0 +1,20 @@
+name: CI
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Install and Build
+      run: |
+        npm ci
+        npm run build
+    
+    - name: Deploy to pages
+      run: |
+        git config user.name "$GITHUB_ACTOR" && git config user.email "${{ secrets.EMAIL }}"
+        npm run gh-pages-deploy
