@@ -4,6 +4,7 @@
   "description": "Soccer/Football Field made with a single div and CSS only animations.",
   "main": "index.js",
   "scripts": {
+    "gh-pages-deploy": "node scripts/gh-pages-deploy.js",
     "start": "webpack-dev-server --mode development",
     "build": "webpack --mode production"
   },
@@ -28,6 +29,7 @@
   "homepage": "https://github.com/iassia/football-field#readme",
   "devDependencies": {
     "css-loader": "3.5.3",
+    "execa": "4.0.0",
     "html-webpack-plugin": "4.3.0",
     "sass": "1.26.5",
     "sass-loader": "8.0.2",
