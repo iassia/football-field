@@ -1,0 +1,37 @@
+{
+  "name": "football-field",
+  "version": "1.0.0",
+  "description": "Soccer/Football Field made with a single div and CSS only animations.",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --mode development",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iassia/football-field.git"
+  },
+  "keywords": [
+    "football",
+    "soccer",
+    "CSS",
+    "only",
+    "animation",
+    "single",
+    "div"
+  ],
+  "author": "Fabio Iassia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iassia/football-field/issues"
+  },
+  "homepage": "https://github.com/iassia/football-field#readme",
+  "devDependencies": {
+    "html-webpack-plugin": "4.3.0",
+    "sass": "1.26.5",
+    "sass-loader": "8.0.2",
+    "webpack": "4.43.0",
+    "webpack-cli": "3.3.11",
+    "webpack-dev-server": "3.10.3"
+  }
+}
