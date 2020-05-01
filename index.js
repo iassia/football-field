@@ -1,3 +1,3 @@
-// import './src/scss/main.scss';
+import './src/scss/main.scss';
 
 console.log("Init");
