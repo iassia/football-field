@@ -1,5 +1,211 @@
-$body-color: red;
+:root {
+  --white: rgba(255, 255, 255, 1);
+  --light-grey: rgba(220, 222, 224, 1);
+  --grey: rgba(197, 200, 201, 1);
+  --light-green: rgba(93, 186, 158, 1);
+  --green: rgba(82, 171, 144, 1);
+  --dark-green: rgba(71, 148, 126, 1);
+  --brown: rgba(87, 42, 29, 1);
+  --reset-isometry: translateZ(30px) rotateZ(45deg) rotateY(-1deg)
+    rotateX(-60deg);
+  --default-shadow: inset 0 -6px 0 rgba(0, 0, 0, 0.2),
+    0 2px 0 rgba(0, 0, 0, 0.2);
+}
 
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
 body {
-  color: $body-color;
+  height: 100%;
+  min-height: 100%;
+}
+body {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--light-grey);
+}
+div {
+  width: 400px;
+  height: 600px;
+  margin: 0 auto;
+  position: relative;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background-color: var(--light-green);
+  box-shadow: -1px 1px 0 var(--dark-green), -2px 2px 0 var(--dark-green),
+    -3px 3px 0 var(--dark-green), -4px 4px 0 var(--dark-green),
+    -5px 5px 0 var(--dark-green), -6px 6px 0 var(--dark-green),
+    -7px 7px 0 var(--dark-green), -8px 8px 0 var(--dark-green),
+    -9px 9px 0 var(--dark-green), -10px 10px 0 var(--dark-green),
+    -11px 11px 0 var(--dark-green), -12px 12px 0 var(--dark-green),
+    -13px 13px 0 var(--brown), -14px 14px 0 var(--brown),
+    -15px 15px 0 var(--brown), -16px 16px 0 var(--brown),
+    -17px 17px 0 var(--brown), -18px 18px 0 var(--brown),
+    -19px 19px 0 var(--brown), -20px 20px 0 var(--brown),
+    -21px 21px 0 var(--brown), -22px 22px 0 var(--brown),
+    -23px 23px 0 var(--brown), -24px 24px 0 var(--brown),
+    -25px 25px 0 var(--brown), -26px 26px 0 var(--brown),
+    -27px 27px 0 var(--brown), -28px 28px 0 var(--brown),
+    -29px 29px 0 var(--brown), -30px 30px 0 var(--brown),
+    -31px 31px 0 var(--brown), -32px 32px 0 var(--brown),
+    -33px 33px 0 var(--brown), -34px 34px 0 var(--brown),
+    -35px 35px 0 var(--brown), -36px 36px 0 var(--brown),
+    -37px 37px 0 var(--brown), -38px 38px 0 var(--brown),
+    -39px 39px 0 var(--brown), -40px 40px 0 var(--brown),
+    -120px 120px 0 var(--grey);
+  background-repeat: no-repeat;
+  background-image: linear-gradient(to right, var(--white), var(--white)),
+    linear-gradient(to right, var(--white), var(--white)),
+    linear-gradient(to right, var(--white), var(--white)),
+    linear-gradient(to right, var(--white), var(--white)),
+    linear-gradient(to right, var(--white), var(--white)),
+    linear-gradient(to right, var(--white), var(--white)),
+    linear-gradient(to right, var(--light-green), var(--light-green)),
+    linear-gradient(to right, var(--light-green), var(--light-green)),
+    linear-gradient(to right, var(--white), var(--white)),
+    linear-gradient(to right, var(--white), var(--white)),
+    linear-gradient(to right, var(--white), var(--white)),
+    linear-gradient(to right, var(--white), var(--white)),
+    linear-gradient(to right, var(--white), var(--white)),
+    linear-gradient(to right, var(--white), var(--white)),
+    linear-gradient(to right, var(--white), var(--white)),
+    radial-gradient(circle, var(--white) 70%, transparent 70%),
+    radial-gradient(circle, var(--light-green) 70%, transparent 70%),
+    radial-gradient(circle, var(--white), var(--white) 70%, transparent 70%),
+    radial-gradient(circle, var(--light-green) 70%, transparent 70%),
+    radial-gradient(circle, #fff 70%, transparent 70%),
+    radial-gradient(circle, var(--light-green) 70%, transparent 70%),
+    radial-gradient(circle, #fff 70%, transparent 70%),
+    linear-gradient(to right, var(--green), var(--green)),
+    linear-gradient(to right, var(--green), var(--green)),
+    linear-gradient(to right, var(--green), var(--green)),
+    linear-gradient(to right, var(--green), var(--green)),
+    linear-gradient(to right, var(--green), var(--green)),
+    linear-gradient(to right, var(--green), var(--green));
+  background-size: 4px 40px, 100px 4px, 4px 40px, 4px 40px, 100px 4px, 4px 40px,
+    192px 100px, 192px 100px, 200px 4px, 200px 4px, 4px 100px, 4px 100px,
+    4px 100px, 4px 100px, 400px 4px, 20px 20px, 152px 152px, 160px 160px,
+    112px 112px, 120px 120px, 112px 112px, 120px 120px, 400px 50px, 400px 50px,
+    400px 50px, 400px 50px, 400px 50px, 400px 50px;
+  background-position: 150px bottom, 150px 560px, 246px bottom, 150px top,
+    150px 40px, 246px top, 104px 0, 104px 504px, 100px 100px, 100px 500px,
+    100px bottom, 296px bottom, 100px top, 296px top, left 295px, 190px 287px,
+    124px 224px, 120px 220px, 144px 14px, 140px 10px, 144px 474px, 140px 470px,
+    left 50px, left 150px, left 250px, left 350px, left 450px, left 550px;
+  transform: rotateX(60deg) rotateY(1deg) rotateZ(-45deg);
+  transform-style: preserve-3d;
+}
+div::after {
+  content: "";
+  width: 400px;
+  height: 600px;
+  padding: 30px;
+  position: absolute;
+  left: 10px;
+  top: -10px;
+  opacity: 0.7;
+  border-top-right-radius: 40px;
+  border-right: 10px solid var(--light-grey);
+  border-top: 10px solid var(--light-grey);
+  background-image: radial-gradient(var(--dark-green) 20%, transparent 5%),
+    radial-gradient(var(--dark-green) 10%, transparent 5%);
+  background-size: 10px 10px;
+  background-position: 0 2px 5px;
+  box-shadow: 10px -10px 0 10px var(--light-grey), 15px -15px 0 15px var(--grey),
+    20px -20px 0 20px var(--light-grey), 25px -25px 0 25px var(--grey),
+    30px -30px 0 30px var(--light-grey), 35px -35px 0 35px var(--grey),
+    40px -40px 0 40px var(--light-grey), 45px -45px 0 45px var(--grey),
+    50px -50px 0 50px var(--light-grey), 55px -55px 0 55px var(--grey),
+    60px -60px 0 60px var(--light-grey), 65px -65px 0 65px var(--grey);
+}
+div::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 140px;
+  top: 40px;
+  border-radius: 100%;
+  background-color: var(--light-grey);
+  box-shadow: var(--default-shadow);
+  animation-name: play;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes play {
+  0% {
+    transform: translateX(0px) translateY(0px) var(--reset-isometry);
+  }
+  1% {
+    transform: translateX(9.9px) translateY(1.9px) var(--reset-isometry);
+  }
+  2% {
+    transform: translateX(24.7px) translateY(8.6px) var(--reset-isometry);
+  }
+  4% {
+    transform: translateX(42.5px) translateY(19.9px) var(--reset-isometry);
+  }
+  6% {
+    transform: translateX(62.1px) translateY(35.4px) var(--reset-isometry);
+  }
+  9% {
+    transform: translateX(82.8px) translateY(55px) var(--reset-isometry);
+  }
+  11% {
+    transform: translateX(103.5px) translateY(78.4px) var(--reset-isometry);
+  }
+  15% {
+    transform: translateX(123.3px) translateY(105.3px) var(--reset-isometry);
+  }
+  18% {
+    transform: translateX(141.2px) translateY(135.4px) var(--reset-isometry);
+  }
+  21% {
+    transform: translateX(156.3px) translateY(168.5px) var(--reset-isometry);
+  }
+  24% {
+    transform: translateX(167.6px) translateY(204.3px) var(--reset-isometry);
+  }
+  28% {
+    transform: translateX(174.3px) translateY(242.5px) var(--reset-isometry);
+  }
+  31% {
+    transform: translateX(175.3px) translateY(282.9px) var(--reset-isometry);
+    box-shadow: inset 0 -6px 0 rgba(0, 0, 0, 0.2),
+      0px 22px 0 -2px rgba(0, 0, 0, 0.05);
+  }
+  35% {
+    transform: translateX(169.6px) translateY(325.3px) var(--reset-isometry);
+  }
+  39% {
+    transform: translateX(156.4px) translateY(369.3px) var(--reset-isometry);
+  }
+  42% {
+    transform: translateX(134.8px) translateY(414.6px) var(--reset-isometry);
+  }
+  46% {
+    transform: translateX(120.4px) translateY(437.8px) var(--reset-isometry);
+  }
+  50% {
+    transform: translateX(99px) translateY(467px) var(--reset-isometry);
+    box-shadow: var(--default-shadow);
+  }
+  60% {
+    transform: translateX(19px) translateY(487px) var(--reset-isometry);
+  }
+  80% {
+    transform: translateX(-119px) translateY(287px) var(--reset-isometry);
+  }
+  100% {
+    transform: translateX(0px) translateY(0px) var(--reset-isometry);
+  }
 }
