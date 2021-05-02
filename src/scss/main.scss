@@ -9,11 +9,13 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 html,
 body {
   height: 100%;
   min-height: 100%;
 }
+
 body {
   display: flex;
   flex-flow: column nowrap;
@@ -21,6 +23,7 @@ body {
   align-items: center;
   background-color: $light-grey;
 }
+
 div {
   @include base-size;
   margin: 0 auto;
@@ -40,9 +43,9 @@ div {
     radial-gradient(circle, $medium-green 70%, transparent 70%),
     radial-gradient(circle, $white, $white 70%, transparent 70%),
     radial-gradient(circle, $medium-green 70%, transparent 70%),
-    radial-gradient(circle, #fff 70%, transparent 70%),
+    radial-gradient(circle, $white 70%, transparent 70%),
     radial-gradient(circle, $medium-green 70%, transparent 70%),
-    radial-gradient(circle, #fff 70%, transparent 70%), solid-color($green),
+    radial-gradient(circle, $white 70%, transparent 70%), solid-color($green),
     solid-color($green), solid-color($green), solid-color($green),
     solid-color($green), solid-color($green);
   background-size: 4px 40px, 100px 4px, 4px 40px, 4px 40px, 100px 4px, 4px 40px,
@@ -58,6 +61,7 @@ div {
   transform: rotateX(60deg) rotateY(1deg) rotateZ(-45deg);
   transform-style: preserve-3d;
 }
+
 div::after {
   content: "";
   @include base-size;
@@ -80,6 +84,7 @@ div::after {
     50px -50px 0 50px $light-grey, 55px -55px 0 55px $grey,
     60px -60px 0 60px $light-grey, 65px -65px 0 65px $grey;
 }
+
 div::before {
   content: "";
   width: 30px;
