@@ -22,20 +22,21 @@
     "div"
   ],
   "author": "Fabio Iassia",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/iassia/football-field/issues"
   },
   "homepage": "https://github.com/iassia/football-field#readme",
   "devDependencies": {
+    "@actions/core": "1.2.7",
+    "@actions/exec": "1.0.4",
     "css-loader": "3.5.3",
-    "execa": "4.0.0",
     "html-webpack-plugin": "4.3.0",
     "sass": "1.26.5",
     "sass-loader": "8.0.2",
     "style-loader": "1.2.1",
     "webpack": "4.43.0",
     "webpack-cli": "3.3.11",
-    "webpack-dev-server": "^3.11.2"
+    "webpack-dev-server": "3.11.2"
   }
 }

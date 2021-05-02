@@ -1,22 +1,20 @@
-const execa = require("execa");
-const fs = require("fs");
+const exec = require('@actions/exec');
+const core = require('@actions/core');
+
+const folderName = 'dist';
+const staticBranch = 'gh-pages';
 
 (async () => {
   try {
-    await execa("git", ["checkout", "--orphan", "gh-pages"]);
-    console.log("Building...");
-    await execa("npm", ["run", "build"]);
-    const folderName = fs.existsSync("dist") ? "dist" : "build";
-    await execa("git", ["--work-tree", folderName, "add", "--all"]);
-    await execa("git", ["--work-tree", folderName, "commit", "-m", "gh-pages"]);
-    console.log("Pushing to gh-pages...");
-    await execa("git", ["push", "origin", "HEAD:gh-pages", "--force"]);
-    await execa("rm", ["-r", folderName]);
-    await execa("git", ["checkout", "-f", "master"]);
-    await execa("git", ["branch", "-D", "gh-pages"]);
-    console.log("Successfully deployed");
-  } catch (e) {
-    console.log(e.message);
-    process.exit(1);
+    await exec.exec('git', ['checkout', '--orphan', staticBranch]);
+    await exec.exec('npm', ['run', 'build']);
+    await exec.exec('git', ['--work-tree', folderName, 'add', '--all']);
+    await exec.exec('git', ['--work-tree', folderName, 'commit', '-m', staticBranch]);
+    await exec.exec('git', ['push', 'origin', `HEAD:${staticBranch}`, '--force']);
+    await exec.exec('rm', ['-r', folderName]);
+    await exec.exec('git', ['checkout', '-f', 'master']);
+    await exec.exec('git', ['branch', '-D', staticBranch]);
+  } catch (error) {
+    core.setFailed(error.message);
   }
 })();
