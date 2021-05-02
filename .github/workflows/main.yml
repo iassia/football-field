@@ -10,14 +10,14 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
+    - name: Install Dependencies
+      run: |
+        npm ci
+
     - name: Lint
       run: |
         npm run lint
 
-    - name: Install Dependencies
-      run: |
-        npm ci
-    
     - name: Deploy to pages
       run: |
         git config user.name "$GITHUB_ACTOR" && git config user.email "${{ secrets.EMAIL }}"
