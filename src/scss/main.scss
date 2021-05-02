@@ -67,8 +67,8 @@ div::after {
   @include base-size;
   padding: 30px;
   position: absolute;
-  left: 10px;
-  top: -10px;
+  left: 12px;
+  top: -12px;
   opacity: 0.7;
   border-top-right-radius: 40px;
   border-right: 10px solid $light-grey;
@@ -87,13 +87,13 @@ div::after {
 
 div::before {
   content: '';
-  width: 30px;
-  height: 30px;
+  width: 14px;
+  height: 14px;
   position: absolute;
   left: 140px;
   top: 40px;
   border-radius: 100%;
-  background-color: $light-grey;
+  background-color: $white;
   box-shadow: $default-shadow;
   animation-name: play;
   animation-duration: 3s;
