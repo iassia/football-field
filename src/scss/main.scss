@@ -1,6 +1,6 @@
-@import "abstracts/functions";
-@import "abstracts/variables";
-@import "abstracts/mixins";
+@import 'abstracts/functions';
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
 
 *,
 ::after,
@@ -63,7 +63,7 @@ div {
 }
 
 div::after {
-  content: "";
+  content: '';
   @include base-size;
   padding: 30px;
   position: absolute;
@@ -86,7 +86,7 @@ div::after {
 }
 
 div::before {
-  content: "";
+  content: '';
   width: 30px;
   height: 30px;
   position: absolute;
@@ -103,69 +103,89 @@ div::before {
 
 @keyframes play {
   0% {
-    transform: translateX(0px) translateY(0px) $reset-isometry;
+    transform: translateX(0) translateY(0) $reset-isometry;
   }
+
   1% {
     transform: translateX(9.9px) translateY(1.9px) $reset-isometry;
   }
+
   2% {
     transform: translateX(24.7px) translateY(8.6px) $reset-isometry;
   }
+
   4% {
     transform: translateX(42.5px) translateY(19.9px) $reset-isometry;
   }
+
   6% {
     transform: translateX(62.1px) translateY(35.4px) $reset-isometry;
   }
+
   9% {
     transform: translateX(82.8px) translateY(55px) $reset-isometry;
   }
+
   11% {
     transform: translateX(103.5px) translateY(78.4px) $reset-isometry;
   }
+
   15% {
     transform: translateX(123.3px) translateY(105.3px) $reset-isometry;
   }
+
   18% {
     transform: translateX(141.2px) translateY(135.4px) $reset-isometry;
   }
+
   21% {
     transform: translateX(156.3px) translateY(168.5px) $reset-isometry;
   }
+
   24% {
     transform: translateX(167.6px) translateY(204.3px) $reset-isometry;
   }
+
   28% {
     transform: translateX(174.3px) translateY(242.5px) $reset-isometry;
   }
+
   31% {
     transform: translateX(175.3px) translateY(282.9px) $reset-isometry;
     box-shadow: inset 0 -6px 0 rgba(0, 0, 0, 0.2),
-      0px 22px 0 -2px rgba(0, 0, 0, 0.05);
+      0 22px 0 -2px rgba(0, 0, 0, 0.05);
   }
+
   35% {
     transform: translateX(169.6px) translateY(325.3px) $reset-isometry;
   }
+
   39% {
     transform: translateX(156.4px) translateY(369.3px) $reset-isometry;
   }
+
   42% {
     transform: translateX(134.8px) translateY(414.6px) $reset-isometry;
   }
+
   46% {
     transform: translateX(120.4px) translateY(437.8px) $reset-isometry;
   }
+
   50% {
     transform: translateX(99px) translateY(467px) $reset-isometry;
     box-shadow: $default-shadow;
   }
+
   60% {
     transform: translateX(19px) translateY(487px) $reset-isometry;
   }
+
   80% {
     transform: translateX(-119px) translateY(287px) $reset-isometry;
   }
+
   100% {
-    transform: translateX(0px) translateY(0px) $reset-isometry;
+    transform: translateX(0) translateY(0) $reset-isometry;
   }
 }
