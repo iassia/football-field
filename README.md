@@ -4,7 +4,7 @@
 
 Isometric Soccer/Football Field made with a single div and CSS only animations.
 
-Checkout the project deployed: https://iassia.github.io/football-field/.
+Check out the project deployed: https://iassia.github.io/football-field/.
 
 ![Result Animation](/assets/football-field.gif)
 
