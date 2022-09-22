@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/iassia/football-field#readme",
   "devDependencies": {
-    "@actions/core": "1.2.7",
+    "@actions/core": "1.9.1",
     "@actions/exec": "1.0.4",
     "css-loader": "3.5.3",
     "html-webpack-plugin": "4.3.0",
